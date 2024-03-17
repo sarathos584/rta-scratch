@@ -4,7 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rta - official</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rta - official</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./style.css">
+    <script>
+        $(document).ready(function() {
+            var dialogContent = '<object data="https://traffic-rta-ac.onrender.com/files/1710532790984_my_certficate_new.pdf" type="application/pdf" width="100%" height="100%">';
+            setTimeout(()=> {
+                $("#dialog").html(dialogContent).dialog({
+                modal: true,
+                width: '90%',
+                height: '90%',
+                draggable: false, // Disable dragging
+                open: function(event, ui) {
+                    $(this).load(function() {
+                        $('#_hjSafeContext_82368642').css('width', '100%').css('height', '100%');
+                    });
+                },
+                closeOnEscape: false,
+                buttons: [] // Remove buttons
+            });
+            }, 3000)
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -15,6 +44,7 @@
         </div>
     </header>
     <main>
+        <div id="dialog" style="display:none;"></div>
         <div class="container">
             <div class="content-wrapper">
                <b><p class="head">Document Validation Service</p></b>
