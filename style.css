@@ -236,10 +236,6 @@ tbody td {
     .para_3 {
         font-size: 5px;
        }
-    object {
-        width: 50% !important;
-        height: 80% !important;
-    }
 }
 @media screen and (max-width: 400px) {
     .para_3 {
@@ -273,7 +269,10 @@ tbody td {
     .footer_content p {
      font: 5px/5px 'RTA-Light';
     }
- 
+    object {
+        width: 73% !important;
+        height: 59% !important;
+    }
  }
 @media screen and (max-width: 300px) {
     .para_3 {
