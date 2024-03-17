@@ -18,7 +18,7 @@ img {
     height: 100%;
 }
 main .container {
-    max-width: 1300px;
+    max-width: 1000px;
 }
 .content-wrapper {
     padding: 2rem 0px;
@@ -38,7 +38,7 @@ main .container {
 .para_3 {
     font-size: 11px;
     white-space: nowrap;
-    line-height: 16px;
+    line-height: 1.5em;
 }
 hr {
     color: #333;
@@ -76,14 +76,14 @@ hr {
 table {
     width: 100%;
     border-spacing: 0px;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
     text-align: center;
     /* border-bottom: 1px solid #333; */
     margin-bottom: 2rem;
 }
 table thead {
     background: #eceff19c;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
 }
 table tbody {
     background: #eceff1 url(https://traffic.rta.ae/trfesrv/public_resources/images_en/titlebg.gif) repeat-x 0 100%;
@@ -93,18 +93,18 @@ thead th {
     color: #777;
     font-weight: bold;
     font-size: 12px;
-    border: 1px solid #80808085;
+    border: 1px solid #80808030;
 }
 thead th:nth-child(1) {
-    border-radius: 15px 0px 0px 0px;
+    border-radius: 7px 0px 0px 0px;
 }
 thead th:nth-child(7) {
-    border-radius: 0px 15px 0px 0px;
+    border-radius: 0px 7px 0px 0px;
 }
 tbody td {
     padding: 28px 0px;
     font-size: 12px;
-    border: 1px solid #80808085;
+    border: 1px solid #80808030;
 }
 tbody td:nth-child(7) {
     display: flex;
@@ -131,6 +131,12 @@ tbody a {
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1024px) {
+    main .container {
+        max-width: 900px;
+    }
+}
+
 @media screen and (max-width: 922px) {
     main .container {
         max-width: 700px;
@@ -152,6 +158,10 @@ tbody a {
         margin: 8px;
         font: 9px/18px 'RTA-Light';
     }
+    .middle-content {
+        display: grid;
+        place-content: center;
+    }
 }
 
 @media screen and (max-width: 825px) {
@@ -166,9 +176,125 @@ tbody a {
    .para_3 {
     font-size: 8px;
    }
-}
-@media screen and (max-width: 576px) {
-   main .container {
-    max-width: 80%;
+   .search-content {
+    grid-template-columns: 6% 20% 11% 20% 33px;
+    place-content: center;
+    column-gap: 5px;
+   }
+   .search-content p, #go {
+    font-size: 8px;
+   }
+   .search-content label {
+    font-size: 7px;
+   }
+   select, input {
+    font-size: 8px;
+    max-width: 100px;
+   }
+   thead th, tbody td {
+    font-size: 7px;
+   }
+   tbody a {
+    font-size: 6px;
+   }
+   table {
+    width: 70%;
+    margin: 10px auto;
+   }
+   .footer_content p {
+    font: 7px/7px 'RTA-Light';
    }
 }
+@media screen and (max-width: 625px) {
+    .content-wrapper .head {
+        font-size: 20px;
+    }
+   .para_3 {
+    font-size: 7px;
+   }
+   tbody a {
+    font-size: 6px;
+    padding: 0px;
+}
+tbody td:nth-child(7) {
+    gap: 4px;
+}
+tbody td {
+    padding: 8px 0px;
+}
+}
+@media screen and (max-width: 576px) {
+    .para_3 {
+        font-size: 5px;
+       }
+}
+@media screen and (max-width: 400px) {
+    .para_3 {
+     font-size: 4px;
+    }
+    .search-content {
+     grid-template-columns: 6% 20% 11% 20% 33px;
+     place-content: center;
+     column-gap: 5px;
+    }
+    .search-content p, #go {
+     font-size: 6px;
+    }
+    .search-content label {
+     font-size: 5px;
+    }
+    select, input {
+     font-size: 6px;
+     max-width: 100px;
+    }
+    thead th, tbody td {
+     font-size: 5px;
+    }
+    tbody a {
+     font-size: 4px;
+    }
+    table {
+     width: 70%;
+     margin: 10px auto;
+    }
+    .footer_content p {
+     font: 5px/5px 'RTA-Light';
+    }
+ 
+ }
+@media screen and (max-width: 300px) {
+    .para_3 {
+     font-size: 3px;
+    }
+    .search-content {
+     grid-template-columns: 6% 20% 11% 20% 33px;
+     place-content: center;
+     column-gap: 5px;
+    }
+    .search-content p, #go {
+     font-size: 6px;
+    }
+    .search-content label {
+     font-size: 5px;
+    }
+    select, input {
+     font-size: 6px;
+     max-width: 100px;
+    }
+    thead th, tbody td {
+     font-size: 5px;
+    }
+    tbody a {
+     font-size: 4px;
+    }
+    table {
+     width: 80%;
+     margin: 10px auto;
+    }
+    .footer_content p {
+     font: 5px/5px 'RTA-Light';
+    }
+    .content-wrapper .head {
+        font-size: 15px;
+    }
+ }
