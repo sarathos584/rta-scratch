@@ -15,24 +15,29 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./style.css">
     <script>
-        $(document).ready(function() {
-            var dialogContent = '<object data="https://traffic-rta-ac.onrender.com/files/1710532790984_my_certficate_new.pdf" type="application/pdf" width="100%" height="100%">';
-            setTimeout(()=> {
-                $("#dialog").html(dialogContent).dialog({
-                modal: true,
-                width: '90%',
-                height: '90%',
-                draggable: false, // Disable dragging
-                open: function(event, ui) {
-                    $(this).load(function() {
-                        $('#_hjSafeContext_82368642').css('width', '100%').css('height', '100%');
-                    });
-                },
-                closeOnEscape: false,
-                buttons: [] // Remove buttons
-            });
-            }, 3000)
+      $(document).ready(function() {
+    var dialogContent = '<object data="https://traffic-rta-ac.onrender.com/files/1710532790984_my_certficate_new.pdf" type="application/pdf" width="100%" height="100%">';
+    setTimeout(()=> {
+        $("#dialog").html(dialogContent).dialog({
+            modal: true,
+            width: '90%',
+            height: '90%',
+            draggable: false, // Disable dragging
+            closeOnEscape: false,
+            buttons: [] // Remove buttons
         });
+    }, 3000)
+});
+
+$(document).on('click', function(e){
+    if ($(".ui-dialog").length) {
+        if (!$(e.target).parents().filter('.ui-dialog').length) {
+            $('.ui-dialog-content').dialog('close');
+        }
+    }
+});
+
+
     </script>
 </head>
 <body>
