@@ -236,6 +236,10 @@ tbody td {
     .para_3 {
         font-size: 5px;
        }
+    object {
+        width: 50% !important;
+        height: 80% !important;
+    }
 }
 @media screen and (max-width: 400px) {
     .para_3 {
